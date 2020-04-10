@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Welcome to the Chuck Norris Api Jokes</h1>
+
+    <h2>Choose the Joke Category</h2>
+
+    <form action="/api/jokes" method="POST">
+        <input list="categories" name="categories">
+            <datalist id="categories">
+                <option value="animal">
+                <option value="career">
+                <option value="celebrity">
+                <option value="dev">
+                <option value="explicit">
+                <option value="fashion">
+                <option value="food">
+                <option value="history">
+                <option value="money">
+                <option value="movie">
+                <option value="music">
+                <option value="political">
+                <option value="religion">
+                <option value="science">
+                <option value="sport">
+                <option value="travel">
+
+                </option>
+            </datalist>
+        <button type="submit">Get Joke</button>
+    </form>
+
+    {{#if joke }}
+        <h2>The Joke</h2>
+        <h4>{{ joke }}</h4>
+    {{/if}}
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: border-box;
+}
+
+body {
+    background-color: rgba(193,250,255,0.4);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Abel', sans-serif;
+    margin: 250px 300px;
+    border: 1px solid #005b62;
+    padding: 50px;
+    background: radial-gradient(circle, rgba(0,157,170,1) 0%, rgba(138,246,255,1) 100%);
+    color: #005b62;
+}
+
+button {
+    padding: 3px;
+    color: #002f33;
+    font-family: 'Abel', sans-serif;
+}
+
