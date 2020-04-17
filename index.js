@@ -25,7 +25,7 @@ app.post('/api/jokes', (req, res) => {
 
     const category = req.body.jokeCategory;
 
-    const jokeUrl = `https://api.chucknorris.io/jokes/random?catrgory=${category}`;
+    const jokeUrl = `https://api.chucknorris.io/jokes/random?category=${category}`;
     console.log(jokeUrl);
 
     request({url: jokeUrl, json: true}, (error, response) => {
@@ -33,7 +33,7 @@ app.post('/api/jokes', (req, res) => {
 
         if(error) {
             res.render('index', {
-                joke: "Sorry that category does not exist"
+                joke: "Sorry that category doesn't exist"
             })
         } else {
             res.render('index', {
@@ -45,6 +45,6 @@ app.post('/api/jokes', (req, res) => {
     })
 })
 
-app.listen(5000, () => {
+app.listen(3000, () => {
     console.log('Server is running');
 });
